@@ -1,56 +1,54 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# Math Magicians
 
-# Project Name
+## Screenshot ![see](./src/assets/images/screenshot.png?raw=true 'Title')
 
-> Description the project.
+> The Bookstore is a website similar to the "Awesome Books" website built in the previous module. You will create an MVP version of it that allows you to:
 
+   Display a list of books.
+   Add a book.
+   Remove a selected book.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- React
 
-## Live Demo (if available)
+## Live Demo
 
-[Live Demo Link](https://livedemo.com)
-
+[Live Demo Link](https://mnekx.github.io/book-store/)
 
 ## Getting Started
 
 **This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
 
 ### Setup
 
+1. git clone https://github.com/mnekx/book-store.git
+2. cd book-store
+3. npm install
+4. npm start to serve into local 8080 port
+
 ### Install
 
-### Usage
+1. git clone https://github.com/mnekx/book-store.git
+2. cd book-store
+3. npm install
+4. npm start to serve into local 8080 port
 
 ### Run tests
 
+npm run test
+
 ### Deployment
 
-
+https://mnekx.github.io/book-store/
 
 ## Authors
 
-👤 **Author1**
+👤 **Mnemba Chambuya**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@mnekx](https://github.com/mnekx)
+- Twitter: [@MnembaChambuya](https://twitter.com/MnembaChambuya)
+- LinkedIn: [mnemba-chambuya](https://linkedin.com/in/mnemba-chambuya)
 
 ## 🤝 Contributing
 
@@ -61,12 +59,6 @@ Feel free to check the [issues page](../../issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
 ## 📝 License
 
