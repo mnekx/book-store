@@ -11,14 +11,11 @@ export const bookRemoved = (id) => ({
 });
 
 export default function books(prevState = [], action) {
-  const index = prevState.indexOf(action.book);
   switch (action.type) {
     case BOOK_ADDED:
       return [...prevState, action.book];
     case BOOK_REMOVED:
-      return prevState
-        .slice(0, index)
-        .concat(prevState.slice(index + 1, prevState.length));
+      return prevState.filter((book) => book.id !== action.id);
 
     default:
       return prevState;
