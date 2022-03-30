@@ -5,8 +5,8 @@ import { bookRemoved } from '../redux/books/books';
 
 function mapDispatchToProps(dispatch) {
   return {
-    onRemove: (book) => {
-      dispatch(bookRemoved(book));
+    onRemove: (id) => {
+      dispatch(bookRemoved(id));
     },
   };
 }
