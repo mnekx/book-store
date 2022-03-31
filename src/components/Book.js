@@ -1,26 +1,22 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { connect } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { bookRemoved } from '../redux/books/books';
 
-function mapDispatchToProps(dispatch) {
-  return {
-    onRemove: (id) => {
-      dispatch(bookRemoved(id));
-    },
-  };
-}
-
-const Book = ({ book }) => (
-  <li key={book.id}>
-    <section>
-      <hgroup>
-        <h1>{book.title}</h1>
-        <h2>{book.author}</h2>
-      </hgroup>
-      <button type="button">Remove</button>
-    </section>
-  </li>
-);
-
-export default connect(null, mapDispatchToProps)(Book);
+const Book = ({ book }) => {
+  const dispatch = useDispatch();
+  return (
+    <li key={book.id}>
+      <section>
+        <hgroup>
+          <h1>{book.title}</h1>
+          <h2>{book.author}</h2>
+        </hgroup>
+        <button type="button" onClick={() => dispatch(bookRemoved(book.id))}>
+          Remove
+        </button>
+      </section>
+    </li>
+  );
+};
+export default Book;
