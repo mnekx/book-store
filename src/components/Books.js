@@ -1,19 +1,19 @@
-import React from 'react';
+/* eslint-disable react/prop-types */
+import { connect } from 'react-redux';
 import Book from './Book';
 import AddBook from './AddBook';
 
-const Books = () => (
+const mapStateToProps = (state) => ({ books: state.books });
+
+const Books = ({ books }) => (
   <div>
     <ul>
-      <Book title="Hunger Games" author="Suzanne Collins" />
-      <Book title="Dune" author="Frank Hubbert" />
-      <Book
-        title="Capital in the twenty-first century"
-        author="Suzanne Collins"
-      />
+      {books.map((book) => (
+        <Book key={book.id} book={book} />
+      ))}
     </ul>
     <AddBook />
   </div>
 );
 
-export default Books;
+export default connect(mapStateToProps, null)(Books);
