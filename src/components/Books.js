@@ -1,5 +1,3 @@
-/* eslint-disable no-nested-ternary */
-/* eslint-disable react/prop-types */
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import Book from './Book';
