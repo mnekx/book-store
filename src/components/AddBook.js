@@ -1,29 +1,44 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
-import { shallowEqual, useDispatch, useSelector } from 'react-redux';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { bookAdded } from '../redux/books/books';
 
 const AddBook = () => {
-  const nextID = useSelector((state) => state.books.length, shallowEqual);
   const dispatch = useDispatch();
+  const [state, setstate] = useState({ author: '', title: '' });
+
   const onAddBook = (e) => {
     e.preventDefault();
-    let arr = Array.from(e.target.elements);
-    arr = arr.filter((el) => el.name !== '');
-    arr = arr.map((el) => [el.name, el.value]);
-    const map = new Map(arr);
-    dispatch(bookAdded(Object.fromEntries(map)));
+    dispatch(bookAdded(state));
+    setstate(() => ({ author: '', title: '' }));
+  };
+
+  const handleChange = (e) => {
+    setstate({ ...state, [e.target.name]: e.target.value });
   };
   return (
-    <form action="" onSubmit={onAddBook}>
+    <form onSubmit={(e) => onAddBook(e)}>
       <fieldset>
         <legend>Add new Book</legend>
         <label htmlFor="title">
-          <input type="text" id="title" name="title" placeholder="Book Title" />
+          <input
+            type="text"
+            id="title"
+            onChange={handleChange}
+            name="title"
+            placeholder="Book Title"
+            value={state.title}
+          />
         </label>
-        <input type="hidden" value={nextID} name="id" />
         <label htmlFor="author">
-          <input type="text" id="author" name="author" placeholder="Author" />
+          <input
+            type="text"
+            id="author"
+            name="author"
+            onChange={handleChange}
+            placeholder="Author"
+            value={state.author}
+          />
         </label>
         <button type="submit">Add Book</button>
       </fieldset>
