@@ -1,3 +1,400 @@
+:root {
+  --main-color: #0290ff;
+  --dirty-white: #fafafa;
+  --gray-border: #e8e8e8;
+  --black-two: #121212;
+  --cool-blue: #4386bf;
+  --warm-grey: #888;
+  --pinkish-grey: #c4c4c4;
+}
+
+header {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px var(--gray-border) solid;
+}
+
+nav {
+  flex-wrap: nowrap;
+  align-items: baseline;
+  align-content: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+main {
+  padding-bottom: 10rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+}
+
+button:active {
+  background-color: white;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
 .d-flex {
   display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.just-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.just-space-btn {
+  justify-content: space-between;
+}
+
+.ml-1rem {
+  margin: 0 1rem;
+}
+
+.text {
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+
+.btn {
+  width: 11.5rem;
+  height: 2.063rem;
+  margin: 0.75rem 0 0.563rem 0;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  background-color: var(--main-color);
+  border: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.vert-devider {
+  width: 2px;
+  border: 1px solid var(--gray-border);
+  height: 4.375rem;
+  margin-right: 3rem;
+  align-self: center;
+}
+
+.acc-container,
+.App-Links,
+.logo {
+  flex: 1;
+}
+
+.logo {
+  max-width: 18rem;
+}
+
+.acc-container {
+  justify-content: flex-end;
+  height: 5rem;
+}
+
+.acc-container span {
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+}
+
+.acc-container svg {
+  align-self: center;
+  color: var(--main-color);
+}
+
+.Oval {
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.005);
+  border: 2px solid var(--gray-border);
+}
+
+.App-Links {
+  max-width: 12rem;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.App-link {
+  width: 6.563rem;
+  height: 1rem;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: black;
+  text-transform: uppercase;
+}
+
+.active-link {
+  opacity: 0.5;
+  color: var(--black-two);
+}
+
+.logo h1 {
+  color: var(--main-color);
+  height: 2.313rem;
+  margin: 0.375rem 0 0.125rem 0;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.info,
+.progress-bar,
+.progress-update {
+  flex: 1 1  25%;
+}
+
+.info {
+  flex-basis: 50%;
+}
+
+.progress-bar svg {
+  width: 5rem;
+  height: 5rem;
+}
+
+.percentage {
+  width: 4.25rem;
+  height: 2.438rem;
+  margin: 0.063rem 5.75rem 0 0.688rem;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+
+.status {
+  width: 5rem;
+  height: 1.125rem;
+  margin: 0.438rem 4.938rem 0.75rem 0.75rem;
+  opacity: 0.5;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+
+.category {
+  width: 3.063rem;
+  height: 1.125rem;
+  margin: 0 2.438rem 0 0;
+  opacity: 0.5;
+}
+
+.title {
+  width: 12.313rem;
+  height: 1.813rem;
+  margin: 0.188rem 20.188rem 0 0;
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  font-family: 'Roboto Slab', serif;
+}
+
+.author {
+  width: 12.313rem;
+  height: 1.188rem;
+  margin: 0.25rem 0 0;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.95rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--cool-blue);
+}
+
+.comments,
+.edit,
+.remove {
+  height: 1.188rem;
+  margin: 0.188rem 0.938rem 0.125rem 0;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--cool-blue);
+  padding: 0 1rem 0 0;
+}
+
+.current-chapter {
+  width: 7.875rem;
+  height: 1.125rem;
+  opacity: 0.5;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: uppercase;
+}
+
+.current-lesson {
+  width: 4.688rem;
+  height: 1.313rem;
+  margin: 0.438rem 6.813rem 0.25rem 0;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: var(--black-two);
+}
+
+.update-progress-btn {
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.add-book-form button {
+  flex: 1 1 20%;
+  height: 2.7rem;
+  margin-top: 0;
+  font-size: 0.813rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+  font-family: 'Roboto Slab', serif;
+  text-transform: uppercase;
+}
+
+.button-grp {
+  padding-top: 1.313rem;
+}
+
+.button-grp button {
+  background-color: white;
+  border-right: 1px solid var(--gray-border);
+}
+
+.button-grp button:last-of-type {
+  border-right: none;
+}
+
+.book-li {
+  padding: 2rem 0 0.5rem 1.688rem;
+  border: 1px solid var(--gray-border);
+  margin-top: 0.938rem;
+  border-radius: 4px;
+}
+
+.add-book-form {
+  padding-top: 1.813rem;
+  border-top: 1px solid var(--gray-border);
+  margin-top: 2.5rem;
+}
+
+.add-book-form fieldset {
+  padding: 0;
+  border: none;
+}
+
+.labels-container {
+  max-width: 100%;
+}
+
+.add-book-form legend {
+  text-transform: uppercase;
+  height: 1.5rem;
+  margin: 1.813rem 32.75rem 1.188rem 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: var(--warm-grey);
+}
+
+.add-book-form label {
+  height: 2.813rem;
+  margin: 0 2.125rem 0 0;
+  border-radius: 4px;
+  background-color: #fff;
+  flex: 3 1 90%;
+  border: solid 2px var(--gray-border);
+}
+
+.add-book-form input {
+  width: 100%;
+  height: 100%;
+  padding: 0.813rem 0 0.813rem 1.063rem;
+  font-size: 1rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  color: var(--pinkish-grey);
+  border: none;
+}
+
+.add-book-form input:focus-visible {
+  outline: none;
+}
+
+label[for="author"] {
+  flex: 1 1 40%;
 }
