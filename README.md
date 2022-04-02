@@ -2,7 +2,7 @@
 
 ## Screenshot ![see](./src/assets/images/screenshot.png?raw=true 'Title')
 
-> The Bookstore is a website similar to the "Awesome Books" website built in the previous module. You will create an MVP version of it that allows you to:
+> The Bookstore is a React App that keeps track of read books:
 
    Display a list of books.
    Add a book.
