@@ -1,4 +1,4 @@
-# Math Magicians
+# Book Store
 
 ## Screenshot ![see](./src/assets/images/screenshot.png?raw=true 'Title')
 
