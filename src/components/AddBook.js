@@ -16,30 +16,34 @@ const AddBook = () => {
     setstate({ ...state, [e.target.name]: e.target.value });
   };
   return (
-    <form onSubmit={(e) => onAddBook(e)}>
+    <form className="add-book-form" onSubmit={(e) => onAddBook(e)}>
       <fieldset>
         <legend>Add new Book</legend>
-        <label htmlFor="title">
-          <input
-            type="text"
-            id="title"
-            onChange={handleChange}
-            name="title"
-            placeholder="Book Title"
-            value={state.title}
-          />
-        </label>
-        <label htmlFor="author">
-          <input
-            type="text"
-            id="author"
-            name="author"
-            onChange={handleChange}
-            placeholder="Author"
-            value={state.author}
-          />
-        </label>
-        <button type="submit">Add Book</button>
+        <div className="d-flex labels-container">
+          <label htmlFor="title">
+            <input
+              type="text"
+              id="title"
+              onChange={handleChange}
+              name="title"
+              placeholder="Book Title"
+              value={state.title}
+            />
+          </label>
+          <label htmlFor="author">
+            <input
+              type="text"
+              id="author"
+              name="author"
+              onChange={handleChange}
+              placeholder="Author"
+              value={state.author}
+            />
+          </label>
+          <button className="btn" type="submit">
+            Add Book
+          </button>
+        </div>
       </fieldset>
     </form>
   );
